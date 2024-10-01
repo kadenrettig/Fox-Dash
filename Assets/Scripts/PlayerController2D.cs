@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController2DDynamic : MonoBehaviour
+public class PlayerController2D : MonoBehaviour
 {
     Rigidbody2D rb;
     public float jumpForce;
