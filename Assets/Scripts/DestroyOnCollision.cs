@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectMover : MonoBehaviour
+public class DestroyOnCollision : MonoBehaviour
 {
-    public float moveSpeed = 2.0f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +13,11 @@ public class ObjectMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Set the movement speed to be the same as the game
-        transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log(other.name);
+        Destroy(other.gameObject);
     }
 }

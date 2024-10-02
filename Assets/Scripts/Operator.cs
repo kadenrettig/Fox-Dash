@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Operator : MonoBehaviour
 {
-    public float gameSpeed;
-    public float delay;
-    public float speedIncrement;
+    public float gameSpeed = 2.0f;
+    public float delay = 10;
+    public float speedIncrement = 0.5f;
 
     // Start is called before the first frame update
     void Start()
