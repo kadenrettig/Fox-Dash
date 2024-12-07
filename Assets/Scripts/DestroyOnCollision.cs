@@ -17,7 +17,9 @@ public class DestroyOnCollision : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log(other.name);
         Destroy(other.gameObject);
+        if (other.gameObject.transform.parent) {
+            Destroy(other.gameObject.transform.parent.gameObject);
+        }
     }
 }

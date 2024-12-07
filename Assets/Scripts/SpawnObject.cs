@@ -27,14 +27,12 @@ public class SpawnObject : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         // ensure this object is allowed to trigger a tileset spawn
-        if (other.tag != "TilesetTrigger") {
+        if (other.tag != "TilesetTrigger")
             return;
-        }
-        Debug.Log("Spawning new tileset");
 
         // decide which prefab will spawn
-        int p = Random.Range(0, gameObjects.Length-1);
-        Vector3 spawnPosition = new Vector3(49.5f, 0, 0);
+        int p = Random.Range(0, gameObjects.Length);
+        Vector3 spawnPosition = new Vector3(37.4f, 0, 0);
         Spawn(p, spawnPosition);
     }
 }
