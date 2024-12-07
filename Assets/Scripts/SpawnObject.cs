@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnObject : MonoBehaviour
 {
     public GameObject[] gameObjects;
+    private float horizontalSpawnPos = 36.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,6 @@ public class SpawnObject : MonoBehaviour
     {
         // spawn the prefab and assign its parent to the spawner
         GameObject newObject = Instantiate(gameObjects[p], spawnPosition, gameObjects[p].transform.rotation);
-        //newObject.transform.SetParent(gameObject.transform, true);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
@@ -32,7 +32,7 @@ public class SpawnObject : MonoBehaviour
 
         // decide which prefab will spawn
         int p = Random.Range(0, gameObjects.Length);
-        Vector3 spawnPosition = new Vector3(37.4f, 0, 0);
+        Vector3 spawnPosition = new Vector3(horizontalSpawnPos, 0, 0);
         Spawn(p, spawnPosition);
     }
 }

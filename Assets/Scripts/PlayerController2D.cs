@@ -7,6 +7,7 @@ public class PlayerController2D : MonoBehaviour
     Rigidbody2D rb;
     public float jumpForce = 7.0f;
     public bool isGrounded = true;
+    public bool isInvulnerable = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,6 @@ public class PlayerController2D : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 isGrounded = false;
             }
-
     }
 
     // Ensure the player is touching the ground in order to jump

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveObject : Operator
 {
-    public float moveSpeed = 2.0f;
+    private float moveSpeed = 1.0f;
 
     // Start is called before the first frame update
     void Start()
