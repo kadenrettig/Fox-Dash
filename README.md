@@ -5,7 +5,7 @@
 
 ## Description
 
-<b>Unity</b> | <b>2D</b> | Fox Dash, an endless runner.
+<b>Unity</b> | <b>2D</b> | Fox Dash, an endless runner inspired by Google's Dino Run. </br></br>Features simplistic art design and game design that seeks to emphasize consistency and challenge a player's reaction time.
 
 ## Showcase
 
