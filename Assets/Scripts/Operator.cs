@@ -35,6 +35,7 @@ public class Operator : MonoBehaviour
     }
 
     void StartGame() {
+        isGameStarted = true;
         gameSpeed = gameStartSpeed;
         InvokeRepeating("IncreaseGameSpeed", timeDelay, repeatRate);
     }
