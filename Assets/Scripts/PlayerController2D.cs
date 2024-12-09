@@ -22,20 +22,23 @@ public class PlayerController2D : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            isActive = true;
-            if (isGrounded) {
+            if (isGrounded && isActive) {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 isGrounded = false;
                 ani.SetBool("isGrounded", false);
             }
+            // player becomes active after pressing space once (to avoid silly jump)
+            isActive = true;
         }
+
+        
 
         if (isActive)
             ani.SetBool("isRunning", true);
     }
 
-    // Ensure the player is touching the ground in order to jump
     private void OnTriggerEnter2D(Collider2D other) {
+        // ensure the player is touching the ground in order to jump
         if (other.tag == "Floor") {
             isGrounded = true;
             ani.SetBool("isGrounded", true);

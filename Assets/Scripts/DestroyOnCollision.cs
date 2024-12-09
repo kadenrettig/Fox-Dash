@@ -17,9 +17,12 @@ public class DestroyOnCollision : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
+        // destroy the object that collided
         Destroy(other.gameObject);
-        if (other.gameObject.transform.parent) {
+
+        // if the obj that collided has a container, clean it up
+        var parent = other.gameObject.transform.parent;
+        if (parent && parent.tag != "GameController") 
             Destroy(other.gameObject.transform.parent.gameObject);
-        }
     }
 }

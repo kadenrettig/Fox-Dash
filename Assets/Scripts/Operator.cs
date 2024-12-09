@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class Operator : MonoBehaviour
 {
+    public GameObject player;
     public static float gameSpeed = 0f;
-    private float gameStartSpeed = 3.5f;
-    private float maxGameSpeed = 10.0f;
+    private static float gameStartSpeed = 6.5f;
+    private static float maxGameSpeed = 20f;
+    private static float speedIncrement = 0.5f;
     private float timeDelay = 6f;
     private float repeatRate = 3f;
-    private float speedIncrement = 0.5f;
     private bool isAtMaxSpeed = false;
     private bool isGameStarted = false;
+    private bool isTrackingPlayer = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (player)
+            isTrackingPlayer = true;
     }
 
     // Update is called once per frame
@@ -32,12 +36,27 @@ public class Operator : MonoBehaviour
             CancelInvoke("IncreaseGameSpeed");
             Debug.Log("Reached maximum speed");
         }
+
+        // check if the player has died, if they exist
+        if (isTrackingPlayer) {
+            if (player == null) {
+                Debug.Log("Player has died.");
+                EndGame();
+            }
+        }
     }
 
     void StartGame() {
         isGameStarted = true;
         gameSpeed = gameStartSpeed;
         InvokeRepeating("IncreaseGameSpeed", timeDelay, repeatRate);
+    }
+
+    void EndGame() {
+        isGameStarted = false;
+        CancelInvoke("IncreaseGameSpeed");
+        gameSpeed = 0f;
+        Debug.Log("Game Ended!!");
     }
 
     void IncreaseGameSpeed() {

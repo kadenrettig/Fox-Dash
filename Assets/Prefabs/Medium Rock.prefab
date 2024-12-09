@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1869693461099621545}
   - component: {fileID: 8622309335198416720}
   - component: {fileID: 5049382622423039281}
+  - component: {fileID: 4613877734611392229}
   m_Layer: 0
   m_Name: Medium Rock
   m_TagString: Untagged
@@ -150,6 +151,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8f225fc0f1d9c4ca165eef10da5315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 10
-  speedIncrement: 0.5
-  moveSpeed: 2
+--- !u!114 &4613877734611392229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8222955557142605113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad3125bdd164df4f8d09763a717ef45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
