@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveObject : Operator
 {
     private float moveSpeed = 1.0f;
+    public Vector3 moveDirection = Vector3.left;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,6 @@ public class MoveObject : Operator
     void Update()
     {
         moveSpeed = Operator.gameSpeed;
-        transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
+        transform.Translate(moveDirection * Time.deltaTime * moveSpeed);
     }
 }

@@ -6,6 +6,7 @@ public class ToggleVisibilityOnDelay : MonoBehaviour
 {
     private float timeDelay = 0.8f;
     private float repeatRate = 0.8f;
+    
     // Start is called before the first frame update
     void Start()
     {

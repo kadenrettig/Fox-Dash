@@ -27,6 +27,7 @@ public class PlayerController2D : MonoBehaviour
                 isGrounded = false;
                 ani.SetBool("isGrounded", false);
             }
+            
             // player becomes active after pressing space once (to avoid silly jump)
             isActive = true;
         }
