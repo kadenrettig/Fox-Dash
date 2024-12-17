@@ -23,4 +23,6 @@ List of different tools used for this project: </br>
 - BeepBox (Music & SFX)
 
 <h2 id="showcase" align="center">Showcase</h2>
-Nothing to show for now.
+ - <b>Title Screen</b>
+<img align="center" src="https://github.com/kadenrettig/Fox-Dash/blob/main/Assets/Materials/UI/Fox-Dash-Static.png"/>
+
