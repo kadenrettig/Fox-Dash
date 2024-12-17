@@ -6,7 +6,7 @@ public class PlayerController2D : MonoBehaviour
 {
     Rigidbody2D rb;
     private Animator ani;
-    public float jumpForce = 7.0f;
+    public float jumpForce = 15.0f;
     public bool isActive = false;
     public bool isGrounded = true;
     public bool isInvulnerable = false;
@@ -31,8 +31,6 @@ public class PlayerController2D : MonoBehaviour
             // player becomes active after pressing space once (to avoid silly jump)
             isActive = true;
         }
-
-        
 
         if (isActive)
             ani.SetBool("isRunning", true);
