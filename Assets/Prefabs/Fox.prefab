@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2893866304901051346}
   - component: {fileID: 1456456393060437323}
   - component: {fileID: 1518510728511426058}
-  - component: {fileID: 1432090512100731121}
   - component: {fileID: 654606853580867794}
+  - component: {fileID: 1432090512100731121}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Player
@@ -193,7 +193,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.077961534, y: -0.31346136}
+  m_Offset: {x: 0.06618063, y: -0.28935426}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -204,24 +204,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17887723, y: 0.12721641}
+  m_Size: {x: 0.33913216, y: 0.07900226}
   m_EdgeRadius: 0
---- !u!114 &1432090512100731121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6953049081914650566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45dc8b89e76c3ac46a0b891e67439d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 8
-  isActive: 0
-  isGrounded: 1
-  isInvulnerable: 0
 --- !u!95 &654606853580867794
 Animator:
   serializedVersion: 5
@@ -243,3 +227,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1432090512100731121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6953049081914650566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45dc8b89e76c3ac46a0b891e67439d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 8
+  gravityScale: 4
+  jumpTimer: 0.1
+  isActive: 0
+  isGrounded: 1
+  isInvulnerable: 0
