@@ -42,7 +42,8 @@ public class PlayerController2D : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space)) {
             if (isActive && isGrounded) {
-                pressedJump = true; 
+                pressedJump = true;
+                isGrounded = false;
                 ani.SetBool("isGrounded", false);
             }
 
